@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+out = ''
 def uppercase(str):
 	for charz in str:
 		if charz not in 'abcdefghijklmnopqrstuvwxyz':
