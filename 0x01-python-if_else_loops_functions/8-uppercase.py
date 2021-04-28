@@ -1,11 +1,10 @@
+  
 #!/usr/bin/python3
-out = ''
 def uppercase(str):
-	for charz in str:
-		if charz not in 'abcdefghijklmnopqrstuvwxyz':
-			out = out + charz
-		else:
-			k = ord(charz)
-			l = k - 32
-			out = out + chr(l)
-print('', out)
+        for x in str:
+                if ord(x) >= 97 and ord(x) <= 122:
+                        a = chr(ord(x) - 32)
+                else:
+                        a = x
+                print("{}".format(a), end="")
+        print("")
