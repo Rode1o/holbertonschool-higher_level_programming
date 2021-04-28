@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\0x00-python-hello_world",
-    "\\0x01-python-if_else_loops_functions"
+    "\\0x01-python-if_else_loops_functions",
+    "\\0x01-python-if_else_loops_functions\\main-files"
   ],
-  "SelectedNode": "\\0x01-python-if_else_loops_functions\\1-last_digit.py",
+  "SelectedNode": "\\0x01-python-if_else_loops_functions\\12-fizzbuzz.py",
   "PreviewInSolutionExplorer": false
 }
