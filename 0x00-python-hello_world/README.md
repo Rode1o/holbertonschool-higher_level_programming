@@ -12,6 +12,5 @@ Welcome. This is the 0x00-python-hello_world directory where I'm storing exercis
  - 7-edges.py: Python script that prints some truncated strings.
  - 8-concat_edges.py: Python script that scrambles some words within a string.
  - 9-easter_egg.py: Python script that prints "The Zen of Python" by Tim Peters.
- - 10-check_cycle.c, lists.h: An implementation of the Floyd detection cycle algorithm.
  - 100-write.py: Python script that prints a string to the standard error.
  - 101-compile: Shell script that compiles a python script.
