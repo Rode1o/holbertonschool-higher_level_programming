@@ -4,4 +4,4 @@ def search_replace(my_list, search, replace):
     for token in range(len(_list)):
         if _list[token] == search:
             _list[token] = replace
-    return[_list]
+    return(_list)
