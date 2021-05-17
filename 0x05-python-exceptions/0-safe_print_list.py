@@ -5,6 +5,6 @@ def safe_print_list(my_list=[], x=0):
         for token in range(x):
             print(my_list[token], end='')
     except IndexError:
-        None
+        pass
     print()
     return (token)
