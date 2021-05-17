@@ -1,4 +1,4 @@
-# README
+# HOLBERTON HIGH LEVEL PROGRAMMMING
 
 Welcome. This is the 0x01-python-if_else_loops_functions directory where I'm storing exercises showing the usage of conditionals, loops and functions in Python. Here are the files and its descriptions:
 
