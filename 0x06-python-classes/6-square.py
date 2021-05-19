@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-""""""
+"""Write a class Square that defines a square by: (based on 5-square.py)
+
+"""
 
 
 class Square:
-    """"""
+    """Write a class that definesa square by: (based on 5-square.py)"""
+    
     def __init__(self, size=0, position=(0,0)):
         self.__size = size
         self.__position = position
