@@ -27,5 +27,5 @@ class Square:
         if self.size != 0:
             for token in range(self.size):
                 print('#' * self.size)
-            else:
-                print()
+        else:
+            print()
