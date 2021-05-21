@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print("N must be a number")
         exit(1)
         """Qeens"""
-    n = int(argv[1]) 
+    n = int(argv[1])
     if n < 4:
         print("N must be at least 4")
         exit(1)
@@ -26,7 +26,7 @@ if __name__ == "__main__":
             if num == box[q][1]:
                 return True
         return False
-    
+
     def wrong_way(word, num):
         if queen_checker(num):
             return False
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     def erase_way(word):
         for q in range(word, n):
             box[q][1] = None
-            
+
     def backtrace(word):
         for num in range(n):
             erase_way(word)
