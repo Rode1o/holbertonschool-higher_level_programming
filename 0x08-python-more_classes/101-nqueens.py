@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if argv[1].isdigit() is False:
         print("N must be a number")
         exit(1)
-        """Qeens"""
+        """Board Size"""
     n = int(argv[1])
     if n < 4:
         print("N must be at least 4")
@@ -18,6 +18,7 @@ if __name__ == "__main__":
     """Board"""
     box = []
 
+    """Qeens"""
     for q in range(n):
         box.append([q, None])
 
@@ -26,6 +27,8 @@ if __name__ == "__main__":
             if num == box[q][1]:
                 return True
         return False
+
+    """2 Qeens a row"""
 
     def wrong_way(word, num):
         if queen_checker(num):
@@ -37,9 +40,13 @@ if __name__ == "__main__":
             q += 1
         return True
 
+    """Clear"""
+
     def erase_way(word):
         for q in range(word, n):
             box[q][1] = None
+
+    """Base condition"""
 
     def backtrace(word):
         for num in range(n):
