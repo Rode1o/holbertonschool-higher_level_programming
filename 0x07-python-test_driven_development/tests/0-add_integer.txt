@@ -1,0 +1,95 @@
+=================================================
+
+		─▄████▄▄░
+		▄▀█▀▐└─┐░░
+		█▄▐▌▄█▄┘██
+		└▄▄▄▄▄┘███
+		██▒█▒███▀
+=================================================
+
+
+# ===============================================
+# Unit test 0-add_integer
+# ===============================================
+
+  ---- Check that the file is executable ----
+    >>> import os
+    >>> os.access('0-add_integer.py', os.X_OK)
+    True
+
+    ---- Check for the documentation of the module ----
+    >>> len(__import__("0-add_integer").__doc__) > 10
+    True
+
+    ---- Check for the documentation of the function ----
+    >>> len(__import__("0-add_integer").add_integer.__doc__) > 10
+    True
+
+    ---- Check for pep8 style ----
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    ---- Check for a newline at the end of the file ----
+    >>> os.popen("cat -e 0-add_integer.py | tail -1").read()[-1]
+    '\n'
+
+    ---- Check for the file has a shebang ----
+    >>> os.popen("cat 0-add_integer.py | head -1").read()
+    '#!/usr/bin/python3\n'
+
+    ---- Check that the README file exists ----
+    >>> cwd = os.getcwd()
+    >>> check_readme = cwd + '/README.md'
+    >>> os.path.exists(check_readme)
+    True
+
+#----------------------------------- test to main-------------#
+
+import module:
+       >>> add_integer = __import__("0-add_integer").add_integer
+
+Add two integer:
+       >>> add_integer(7, 7)
+       14
+
+Add two floats:
+       >>> add_integer(7)
+       105
+
+Add two floats:
+       >>> add_integer(7.0, 7.0)
+       14
+
+Add float with integer:
+       >>> add_integer(7.0, 7)
+       14
+
+Add strings:
+       >>> add_integer("te", "st")
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+Add b as string:
+       >>> add_integer(7, "test")
+       Traceback (most recent call last):
+       TypeError: b must be an integer
+
+Add None:
+       >>> add_integer()
+       Traceback (most recent call last):
+       TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Add three numbers:
+       >>> add_integer(7, 7, 7)
+       Traceback (most recent call last):
+       TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Float overflow:
+       >>> add_integer(float('inf'), 7)
+       Traceback (most recent call last):
+       OverflowError: cannot convert float infinity to integer
+
+NaN float:
+       >>> add_integer(float('NaN'), 7)
+       Traceback (most recent call last):
+       ValueError: cannot convert float NaN to integer
