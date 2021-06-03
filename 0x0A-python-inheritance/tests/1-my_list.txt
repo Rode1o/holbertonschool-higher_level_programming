@@ -1,0 +1,116 @@
+============================================
+          u$$c   ""   ^"^**$$$$$$$$$$$$$b.
+        z$$#"""           `!?$$$$$$$$$$$$$N.
+      .$P                   ~!R$$$$$$$$$$$$$b
+     x$F                 **$b. '"R).$$$$$$$$$$
+    J^"                           #$$$$$$$$$$$$.
+   z$e                      ..      "**$$$$$$$$$
+  :$P           .        .$$$$$b.    ..  "  #$$$$
+  $$            L          ^*$$$$b   "      4$$$$L
+ 4$$            ^u    .e$$$$e."*$$$N.       @$$$$$
+ $$E            d$$$$$$$$$$$$$$L "$$$$$  mu $$$$$$F
+ $$&            $$$$$$$$$$$$$$$$N   "#* * ?$$$$$$$N
+ $$F            '$$$$$$$$$$$$$$$$$bec...z$ $$$$$$$$
+'$$F             `$$$$$$$$$$$$$$$$$$$$$$$$ '$$$$E"$
+ $$                  ^""""""`       ^"*$$$& 9$$$$N
+ k  u$                                  "$$. "$$P r
+ 4$$$$L                                   "$. eeeR
+  $$$$$k                                   '$e. .@
+  3$$$$$b                                   '$$$$
+   $$$$$$                                    3$$"
+    $$$$$  dc                                4$F
+     RF** <$$                                J"
+      #bue$$$LJ$$$Nc.                        "
+========================================================
+
+
+# ===============================================
+# Unit test 1-my_list
+# ===============================================
+
+  >>> import os
+
+import module
+       >>> MyList = __import__('1-my_list').MyList
+       
+### Module documentation.
+    >>> len('1-my_list'.__doc__) > 10
+    True
+
+### Function documentation.
+    >>> len(MyList.print_sorted.__doc__) > 10
+    True
+
+### New line at the end of the file.
+    >>> os.popen('cat -e 1-my_list.py | tail -1').read()[-1]
+    '\n'
+
+### File contains the proper shebang.
+    >>> os.popen('cat 1-my_list.py | head -1').read()
+    '#!/usr/bin/python3\n'
+
+### No error from pep8
+    >>> os.popen("pep8 1-my_list.py").read()
+    ''
+
+### Executable file permissions.
+    >>> import os
+    >>> os.access('1-my_list.py', os.X_OK)
+    True
+
+### README exists on current directory.
+    >>> cwd = os.getcwd()
+    >>> path = cwd + '/README.md'
+    >>> os.path.exists(path)
+    True
+
+    >>> l = MyList()
+    >>> l.append(5)
+    >>> l.append(6)
+    >>> l.append(7)
+    >>> l.append(8)
+    >>> l.append(9)
+    >>> l.append(10)
+    >>> print(l)
+    [5, 6, 7, 8, 9, 10]
+
+    >>> l.print_sorted()
+    [5, 6, 7, 8, 9, 10]
+
+    >>> l = MyList()
+    >>> l.append(10)
+    >>> l.append(9)
+    >>> l.append(8)
+    >>> l.append(7)
+    >>> l.append(6)
+    >>> l.append(5)
+    >>> print(l)
+    [10, 9, 8, 7, 6, 5]
+    >>> l.print_sorted()
+    [5, 6, 7, 8, 9, 10]
+    >>> print(l)
+    [10, 9, 8, 7, 6, 5]
+    >>> l.append(-5)
+    >>> l.append(11)
+    >>> print(l)
+    [10, 9, 8, 7, 6, 5, -5, 11]
+    >>> l.print_sorted()
+    [-5, 5, 6, 7, 8, 9, 10, 11]
+    >>> l = MyList()
+    >>> l.append(-5)
+    >>> l.append(-7)
+    >>> l.append(-23)
+    >>> l.append(-2)
+    >>> l.append(-1)
+    >>> print(l)
+    [-5, -7, -23, -2, -1]
+    >>> l.print_sorted()
+    [-23, -7, -5, -2, -1]
+    >>> l = MyList(2)
+    Traceback (most recent call last):
+    TypeError: 'int' object is not iterable
+    >>> issubclass(MyList, list)
+    True
+    >>> issubclass(list, MyList)
+    False
+ 
