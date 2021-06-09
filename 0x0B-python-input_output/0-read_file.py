@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""holberton care berga"""
+"""function that reads a text file (UTF8) and prints it to stdout"""
 
 
 def read_file(filename=""):
