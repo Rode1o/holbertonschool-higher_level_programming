@@ -111,10 +111,6 @@ class TestBaseFunctions(unittest.TestCase):
         self.assertEqual(json_l[1],
                          {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0})
 
-    def test_fjs_empty(self):
-        """ Send empty string """
-        self.assertEqual([], Base.from_json_string(""))
-
     def test_fjs_None(self):
         """ Send None """
         self.assertEqual([], Base.from_json_string(None))

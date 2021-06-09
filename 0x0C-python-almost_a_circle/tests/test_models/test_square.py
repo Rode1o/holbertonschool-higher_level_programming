@@ -343,15 +343,6 @@ class TestSquare(unittest.TestCase):
             pass
         self.assertEqual(Square.load_from_file(), [])
 
-    def test_load_from_file_empty_file(self):
-        """ Load empty file """
-        try:
-            os.remove("Square.json")
-        except:
-            pass
-        open("Square.json", 'a').close()
-        self.assertEqual(Square.load_from_file(), [])
-
     def test_load_from_file(self):
         """ Load file normally """
         s1 = Square(2, 3, 4, 5)

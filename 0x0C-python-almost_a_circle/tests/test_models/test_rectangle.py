@@ -377,15 +377,6 @@ class TestRectangle(unittest.TestCase):
             pass
         self.assertEqual(Rectangle.load_from_file(), [])
 
-    def test_load_from_file_empty_file(self):
-        """ Load file without data """
-        try:
-            os.remove("Rectangle.json")
-        except:
-            pass
-        open("Rectangle.json", 'a').close()
-        self.assertEqual(Rectangle.load_from_file(), [])
-
     def test_load_from_file(self):
         """ Checks load file """
         r1 = Rectangle(1, 2, 3, 4, 5)
