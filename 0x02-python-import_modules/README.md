@@ -1,6 +1,6 @@
 # holbertonschool-higher_level_programming
 
-Welcome. This is the 0x01-python-if_else_loops_functions directory where I'm storing exercises showing the basics of Python.
+Welcome. This is the 0x02-python-import_modules directory where I'm storing exercises showing the basics of Python.
 
 -  0-add.py - prints the result of any addition 
 -  1-calculation.py - Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
