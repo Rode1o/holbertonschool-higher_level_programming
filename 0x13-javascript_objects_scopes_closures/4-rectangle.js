@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 // Update class Rectangle
 
 module.exports = class Rectangle {
@@ -10,7 +10,7 @@ module.exports = class Rectangle {
   }
 
   print () {
-      for (let s = this.height; s; s--) {
+    for (let s = this.height; s; s--) {
       console.log('X'.repeat(this.width));
     }
   }
