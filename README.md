@@ -23,3 +23,4 @@ Welcome to the Holberton School's High Level Programming repository where I'll b
 | **[0x0C-python-almost_a_circle](./0x0C-python-almost_a_circle)**                        | Preparing to airbnb Clone  |
 | **[0x0E. SQL - More queries](./0x0E-SQL_more_queries)**                                 | SQL - More queries.                           |
 | **[0x12. JavaScript - Warm up](./0x12-javascript-warm_up)**                             | JavaScript - Basics.                          |
+| **[0x13-Javascript-objects_scopes_closures](./0x13-javascript_objects_scopes_closures)**                             | JavaScript - Objects , Scopes, Closures |
