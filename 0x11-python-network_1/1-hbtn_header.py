@@ -6,4 +6,3 @@ if __name__ == "__main__":
     url = request.Request(argv[1])
     with request.urlopen(url) as page:
         print(page.headers.get('X-Request-Id'))
-        

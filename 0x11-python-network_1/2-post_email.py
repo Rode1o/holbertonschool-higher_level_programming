@@ -9,4 +9,3 @@ if __name__ == "__main__":
     req = request.Request(argv[1], data)
     with request.urlopen(req) as page:
         print(page.read().decode('utf-8'))
-
